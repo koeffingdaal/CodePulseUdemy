@@ -43,7 +43,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CodePluse.API",
+              "Title": "CodePluse.API.csproj",
               "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\CodePluse.API.csproj",
               "RelativeDocumentMoniker": "CodePluse.API\\CodePluse.API.csproj",
               "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\CodePluse.API.csproj",
@@ -63,8 +63,7 @@
               "RelativeToolTip": "CodePluse.API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-03T22:24:55.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T22:24:55.339Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "CodePluse.API\\Models\\DTO\\CategoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:40:22.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T21:40:22.512Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "CodePluse.API\\Models\\DTO\\CreateCategoryRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:40:19.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T21:40:19.494Z"
             },
             {
               "$type": "Document",

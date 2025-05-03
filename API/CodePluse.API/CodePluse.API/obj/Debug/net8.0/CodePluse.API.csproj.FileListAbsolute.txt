@@ -170,3 +170,4 @@ F:\Udemy\CodePulse\API\CodePluse.API\CodePluse.API\bin\Debug\net8.0\runtimes\win
 F:\Udemy\CodePulse\API\CodePluse.API\CodePluse.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 F:\Udemy\CodePulse\API\CodePluse.API\CodePluse.API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 F:\Udemy\CodePulse\API\CodePluse.API\CodePluse.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+F:\Udemy\CodePulse\API\CodePluse.API\CodePluse.API\obj\Debug\net8.0\CodePluse.API.sourcelink.json

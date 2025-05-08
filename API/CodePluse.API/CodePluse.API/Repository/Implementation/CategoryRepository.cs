@@ -1,6 +1,7 @@
 ﻿using CodePluse.API.Data;
 using CodePluse.API.Models.Domain;
 using CodePluse.API.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodePluse.API.Repository.Implementation
 {
@@ -18,6 +19,11 @@ namespace CodePluse.API.Repository.Implementation
             await _context.SaveChangesAsync();
 
             return category;
+        }
+
+        public async Task<IEnumerable<Category>> GetCategoriesAsync()
+        {
+            return await _context.Categories.ToListAsync();
         }
     }
 }

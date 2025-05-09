@@ -1,31 +1,45 @@
-<div class="container">
-  <h1 class="mt-3">Category List</h1>
-
-  <div class="d-flex justify-content-end mt-3">
-    <a [routerLink]="['/admin/categories/add']" class="btn btn-primary">Add Category</a>
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0 text-primary">📂 Category List</h2>
+    <a [routerLink]="['/admin/categories/add']" class="btn btn-success shadow-sm">
+      <i class="bi bi-plus-circle me-1"></i> Add Category
+    </a>
   </div>
 
-  <ng-container *ngIf="categories">
-    <table class="table table-bordered mt-3">
-      <thead>
-        <tr>
-          <th>Sl No</th> <!-- Serial number -->
-          <th>Id</th>
-          <th>Name</th>
-          <th>Url Handle</th>
-        </tr>
-      </thead>
+  <ng-container *ngIf="categories && categories.length > 0; else noData">
+    <div class="table-responsive">
+      <table class="table table-hover table-striped table-bordered align-middle shadow-sm">
+        <thead class="table-dark text-center">
+          <tr>
+            <th scope="col">Serial No</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">URL Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categories | paginate: { itemsPerPage: 10, currentPage: page }; let i = index">
+            <td class="text-center">{{ (page - 1) * 5 + i + 1 }}</td>
+            <td>{{ category.id }}</td>
+            <td>{{ category.name }}</td>
+            <td>{{ category.urlHandle }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      <tbody>
-        <tr *ngFor="let category of categories | paginate: { itemsPerPage: 5, currentPage: page }; let i = index">
-          <td>{{ (page - 1) * 5 + i + 1 }}</td> <!-- Serial number -->
-          <td>{{ category.id }}</td>
-          <td>{{ category.name }}</td>
-          <td>{{ category.urlHandle }}</td>
-        </tr>
-      </tbody>
-    </table>
+   <div class="d-flex justify-content-center mt-3">
+  <pagination-controls
+    (pageChange)="page = $event"
+    class="pagination-sm">
+  </pagination-controls>
+</div>
 
-    <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </ng-container>
+
+  <ng-template #noData>
+    <div class="alert alert-warning text-center mt-4" role="alert">
+      No categories found.
+    </div>
+  </ng-template>
 </div>

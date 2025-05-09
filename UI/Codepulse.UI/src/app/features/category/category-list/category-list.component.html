@@ -6,7 +6,7 @@
     </a>
   </div>
 
-  <ng-container *ngIf="categories && categories.length > 0; else noData">
+  <ng-container *ngIf="categories$ | async as categories; else noData">
     <div class="table-responsive">
       <table class="table table-hover table-striped table-bordered align-middle shadow-sm">
         <thead class="table-dark text-center">

@@ -42,8 +42,7 @@
               "RelativeToolTip": "CodePluse.API\\Repository\\Implementation\\CategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T19:44:26.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T19:44:26.087Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "CodePluse.API\\Controllers\\CategoriesController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAAAEMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:44:16.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T21:44:16.54Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "CodePluse.API\\Repository\\Interface\\ICategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:42:19.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T21:42:19.425Z"
             }
           ]
         }

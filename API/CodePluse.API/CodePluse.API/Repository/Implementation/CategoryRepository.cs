@@ -25,5 +25,10 @@ namespace CodePluse.API.Repository.Implementation
         {
             return await _context.Categories.ToListAsync();
         }
+
+        public async Task<Category?> GetCategoryByIdAsync(Guid id)
+        {
+            return await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
+        }
     }
 }

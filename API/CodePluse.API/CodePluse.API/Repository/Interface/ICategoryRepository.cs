@@ -8,6 +8,10 @@ namespace CodePluse.API.Repository.Interface
 
         Task<IEnumerable<Category>> GetCategoriesAsync();
 
+        Task<Category?> GetCategoryByIdAsync (Guid id);
+
+
+
 
     }
 }

@@ -20,9 +20,11 @@ namespace CodePluse.API.Controllers
         }
 
 
+
+        // Create a single Category
         [HttpPost]
 
-        public async Task<IActionResult> CreateCategory(CreateCategoryRequestDto requestDto)
+        public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto requestDto)
         {
             //Map DTO to Domain Model
 
@@ -47,6 +49,8 @@ namespace CodePluse.API.Controllers
             return Ok(response);
         }
 
+        // Get All category
+
         [HttpGet]
 
         public async Task<IActionResult> GetAllCategories ()
@@ -66,6 +70,27 @@ namespace CodePluse.API.Controllers
                     UrlHandle = category.UrlHandle 
                 });
             }
+
+            return Ok(response);
+        }
+
+
+        //Get Category by ID 
+
+        [HttpGet]
+        [Route("{id:guid}")]
+
+        public async Task<IActionResult> GetCategoryById([FromRoute] Guid id)
+        {
+            var existingCategory = await _categoryRepository.GetCategoryByIdAsync(id);
+
+            if (existingCategory == null)
+            {
+                return NotFound();
+            }
+            // map to DTO
+
+            var response = new CategoryDto { Id = existingCategory.Id, Name = existingCategory.Name, UrlHandle = existingCategory.UrlHandle };
 
             return Ok(response);
         }

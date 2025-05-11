@@ -42,8 +42,7 @@
               "RelativeToolTip": "CodePluse.API\\Repository\\Implementation\\CategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T19:44:26.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T19:44:26.087Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "CodePluse.API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-03T22:24:55.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T22:24:55.339Z"
             },
             {
               "$type": "Document",
@@ -66,7 +64,7 @@
               "RelativeDocumentMoniker": "CodePluse.API\\Controllers\\CategoriesController.cs",
               "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "CodePluse.API\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T21:44:16.54Z",
               "EditorCaption": ""
@@ -81,8 +79,7 @@
               "RelativeToolTip": "CodePluse.API\\Models\\DTO\\CategoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:40:22.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T21:40:22.512Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "CodePluse.API\\Repository\\Interface\\ICategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:42:19.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T21:42:19.425Z"
             }
           ]
         }

@@ -10,6 +10,8 @@ namespace CodePluse.API.Repository.Interface
 
         Task<Category?> GetCategoryByIdAsync (Guid id);
 
+        Task<Category?> UpdateAsync(Category category);
+
 
 
 

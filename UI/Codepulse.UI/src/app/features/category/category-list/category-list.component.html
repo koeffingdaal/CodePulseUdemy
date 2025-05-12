@@ -20,7 +20,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let category of categories | paginate: { itemsPerPage: 10, currentPage: page }; let i = index">
+          <tr *ngFor="let category of categories | paginate: { itemsPerPage: 5, currentPage: page }; let i = index">
             <td class="text-center">{{ (page - 1) * 5 + i + 1 }}</td>
             <td>{{ category.id }}</td>
             <td>{{ category.name }}</td>

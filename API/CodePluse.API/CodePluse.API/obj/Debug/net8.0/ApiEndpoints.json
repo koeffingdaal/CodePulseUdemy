@@ -40,5 +40,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CodePluse.API.Controllers.CategoriesController",
+    "Method": "EditCategory",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "requestDto",
+        "Type": "CodePluse.API.Models.DTO.EditCategoryRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

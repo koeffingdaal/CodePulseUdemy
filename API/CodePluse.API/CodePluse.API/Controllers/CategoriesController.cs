@@ -127,5 +127,36 @@ namespace CodePluse.API.Controllers
 
             return Ok(response); // Return 200 OK with updated category
         }
+
+
+
+        // DELETE: Delete category by ID
+        // Route: https://localhost:xxxx/api/categories/{id}
+
+        [HttpDelete]
+        [Route("{id:guid}")]
+
+        public async Task<IActionResult> DeleteCategory(Guid id)
+        {
+            var category = await _categoryRepository.DeleteAsync(id);
+
+            if (category is null)
+            {
+                return NotFound();
+            }
+
+            // Map Domain model to DTO
+
+            var response = new CategoryDto
+            {
+                Id = category.Id,
+                Name = category.Name,
+                UrlHandle = category.UrlHandle
+            };
+
+            return Ok(response);
+        }
+
+        
     }
 }

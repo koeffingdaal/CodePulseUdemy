@@ -24,6 +24,29 @@ namespace CodePluse.API.Repository.Implementation
             return category;
         }
 
+
+
+
+
+
+        // Delete a single Category
+        public async Task<Category?> DeleteAsync(Guid id)
+        {
+            var existingCategory = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (existingCategory is null)
+            {
+                return null;
+            }
+
+            _context.Categories.Remove(existingCategory);
+            await _context.SaveChangesAsync();
+
+            return existingCategory;
+        }
+
+
+
         // Retrieve all categories
         public async Task<IEnumerable<Category>> GetCategoriesAsync()
         {

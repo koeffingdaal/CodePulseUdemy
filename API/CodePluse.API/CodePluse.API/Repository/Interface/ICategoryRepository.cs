@@ -12,6 +12,10 @@ namespace CodePluse.API.Repository.Interface
 
         Task<Category?> UpdateAsync(Category category);
 
+        Task<Category?> DeleteAsync(Guid id);
+
+        
+
 
 
 

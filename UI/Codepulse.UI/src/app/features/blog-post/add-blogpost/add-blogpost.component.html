@@ -1,0 +1,73 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center border-bottom pb-2">Create Blog Post</h2>
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <form>
+        <div class="row g-3">
+
+          <!-- Title -->
+          <div class="col-md-6">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="Enter post title">
+          </div>
+
+          <!-- URL Handle -->
+          <div class="col-md-6">
+            <label for="urlHandle" class="form-label">URL Handle</label>
+            <input type="text" id="urlHandle" name="urlHandle" class="form-control" placeholder="Enter URL slug">
+          </div>
+
+          <!-- Short Description -->
+          <div class="col-12">
+            <label for="shortDescription" class="form-label">Short Description</label>
+            <input type="text" id="shortDescription" name="shortDescription" class="form-control"
+              placeholder="Enter a short summary">
+          </div>
+
+          <!-- Content -->
+          <div class="col-12">
+            <label for="content" class="form-label">Content</label>
+            <textarea name="content" id="content" rows="5" class="form-control"
+              placeholder="Write your blog content here..."></textarea>
+          </div>
+
+          <!-- Featured Image URL -->
+          <div class="col-12">
+            <label for="featuredImageUrl" class="form-label">Featured Image URL</label>
+            <input type="text" id="featuredImageUrl" name="featuredImageUrl" class="form-control"
+              placeholder="http://example.com/image.jpg">
+          </div>
+
+          <!-- Published Date -->
+          <div class="col-md-6">
+            <label for="publishedDate" class="form-label">Published Date</label>
+            <input type="date" id="publishedDate" name="publishedDate" class="form-control">
+          </div>
+
+          <!-- Author -->
+          <div class="col-md-6">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" id="author" name="author" class="form-control" placeholder="Author name">
+          </div>
+
+          <!-- Is Visible Checkbox -->
+          <div class="col-12">
+            <div class="form-check mt-2">
+              <input class="form-check-input" type="checkbox" id="isVisible">
+              <label class="form-check-label" for="isVisible">
+                Is Visible?
+              </label>
+            </div>
+          </div>
+
+          <!-- Save Button -->
+          <div class="col-12 mt-3 text-end">
+            <button type="submit" class="btn btn-primary px-4">Save</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

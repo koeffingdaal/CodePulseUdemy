@@ -3,58 +3,62 @@
 
   <div class="card shadow-sm">
     <div class="card-body">
-      <form>
+      <form #form="ngForm" (ngSubmit)="onSubmit()">
         <div class="row g-3">
 
           <!-- Title -->
           <div class="col-md-6">
             <label for="title" class="form-label">Title</label>
-            <input type="text" id="title" name="title" class="form-control" placeholder="Enter post title">
+            <input type="text" id="title" name="title" class="form-control" placeholder="Enter post title"
+              [(ngModel)]="model.title">
           </div>
 
           <!-- URL Handle -->
           <div class="col-md-6">
             <label for="urlHandle" class="form-label">URL Handle</label>
-            <input type="text" id="urlHandle" name="urlHandle" class="form-control" placeholder="Enter URL slug">
+            <input type="text" id="urlHandle" name="urlHandle" class="form-control" placeholder="Enter URL slug"
+              [(ngModel)]="model.urlHandle">
           </div>
 
           <!-- Short Description -->
           <div class="col-12">
             <label for="shortDescription" class="form-label">Short Description</label>
             <input type="text" id="shortDescription" name="shortDescription" class="form-control"
-              placeholder="Enter a short summary">
+              placeholder="Enter a short summary" [(ngModel)]="model.shortDescription">
           </div>
 
           <!-- Content -->
           <div class="col-12">
             <label for="content" class="form-label">Content</label>
             <textarea name="content" id="content" rows="5" class="form-control"
-              placeholder="Write your blog content here..."></textarea>
+              placeholder="Write your blog content here..." [(ngModel)]="model.content"></textarea>
           </div>
 
           <!-- Featured Image URL -->
           <div class="col-12">
             <label for="featuredImageUrl" class="form-label">Featured Image URL</label>
             <input type="text" id="featuredImageUrl" name="featuredImageUrl" class="form-control"
-              placeholder="http://example.com/image.jpg">
+              placeholder="http://example.com/image.jpg" [(ngModel)]="model.featureImageUrl">
           </div>
 
           <!-- Published Date -->
           <div class="col-md-6">
             <label for="publishedDate" class="form-label">Published Date</label>
-            <input type="date" id="publishedDate" name="publishedDate" class="form-control">
+            <input type="date" id="publishedDate" name="publishedDate" class="form-control"
+              value="{{model.publishedDate}}" [ngModel]="model.publishedDate | date:'yyyy-MM-dd'" (ngModelChange)="model.publishedDate = $event">
           </div>
 
           <!-- Author -->
           <div class="col-md-6">
             <label for="author" class="form-label">Author</label>
-            <input type="text" id="author" name="author" class="form-control" placeholder="Author name">
+            <input type="text" id="author" name="author" class="form-control" placeholder="Author name"
+              [(ngModel)]="model.author">
           </div>
 
           <!-- Is Visible Checkbox -->
           <div class="col-12">
             <div class="form-check mt-2">
-              <input class="form-check-input" type="checkbox" id="isVisible">
+              <input class="form-check-input" type="checkbox" id="isVisible" name="isVisible" [(ngModel)]="model.isVisible">
               <label class="form-check-label" for="isVisible">
                 Is Visible?
               </label>

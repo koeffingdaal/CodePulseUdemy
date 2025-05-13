@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "CodePluse.API.Controllers.BlogPostController",
+    "Method": "CreateBlogPost",
+    "RelativePath": "api/BlogPost",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createBlogPostRequestDto",
+        "Type": "CodePluse.API.Models.DTO.CreateBlogPostRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CodePluse.API.Controllers.CategoriesController",
     "Method": "CreateCategory",
     "RelativePath": "api/Categories",

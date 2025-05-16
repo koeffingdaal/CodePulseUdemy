@@ -59,5 +59,35 @@ namespace CodePluse.API.Controllers
 
 
         }
+
+
+        [HttpGet]
+
+        public async Task<IActionResult> GetAllBlogPost()
+        {
+            var blogpost = await blogPostRepository.GetAllAsync();
+
+            // Convert Domain to DTO
+
+            var response = new List<BlogPostDto>();
+
+            foreach (var blogPost in blogpost)
+            {
+                response.Add(new BlogPostDto
+                {
+                    Id = blogPost.Id,
+                    Author = blogPost.Author,
+                    Content = blogPost.Content,
+                    FeaturedImageUrl = blogPost.FeaturedImageUrl,
+                    IsVisible = blogPost.IsVisible,
+                    PublishedDate = blogPost.PublishedDate,
+                    ShortDescription = blogPost.ShortDescription,
+                    Title = blogPost.Title,
+                    UrlHandle = blogPost.UrlHandle,
+                });
+            }
+
+            return Ok(response);
+        }
     }
 }

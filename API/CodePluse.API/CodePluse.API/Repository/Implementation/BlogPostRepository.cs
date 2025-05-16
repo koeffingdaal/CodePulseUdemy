@@ -1,6 +1,7 @@
 ﻿using CodePluse.API.Data;
 using CodePluse.API.Models.Domain;
 using CodePluse.API.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodePluse.API.Repository.Implementation
 {
@@ -22,6 +23,13 @@ namespace CodePluse.API.Repository.Implementation
             await _context.SaveChangesAsync();
 
             return blogPost;
+        }
+
+
+        // Get all Blog Posts
+        public async Task<IEnumerable<BlogPost>> GetAllAsync()
+        {
+            return await _context.BlogPosts.ToListAsync();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace CodePluse.API.Repository.Implementation
         // Create a single BlogPost
         public async Task<BlogPost> CreateAsync(BlogPost blogPost)
         {
-            await _context.AddAsync(blogPost);
+            await _context.BlogPosts.AddAsync(blogPost);
             await _context.SaveChangesAsync();
 
             return blogPost;

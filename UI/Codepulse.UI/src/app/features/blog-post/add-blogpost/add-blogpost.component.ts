@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { AddBlogPost } from '../models/add-blog-post.model';
+import { BlogPostService } from '../services/blog-post.service';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-blogpost',
@@ -10,22 +13,31 @@ export class AddBlogpostComponent {
 
   model: AddBlogPost;
 
-  constructor() {
-    this.model = {
-      title: '',
-      shortDescription: '',
-      urlHandle: '',
-      content: '',
-      featureImageUrl: '',
-      author: '',
-      isVisible: true,
-      publishedDate: new Date()
 
+  constructor(private blogPostService: BlogPostService, private router: Router) {
+    this.model = {
+      Title: '',
+      ShortDescription: '',
+      UrlHandle: '',
+      Content: '',
+      FeaturedImageUrl: '',
+      Author: '',
+      IsVisible: true,
+      PublishedDate: new Date()
     }
   }
 
-  onSubmit(): void {
-    console.log(this.model);
+  onFormSubmit(): void {
+    console.log('Submitting:', this.model); // For debugging
+    this.blogPostService.createBlogPost(this.model)
+      .subscribe({
+        next: (response) => {
+          this.router.navigateByUrl('/admin/blogposts');
+        },
+        error: (error) => {
+          console.error('Error submitting blog post:', error);
+        }
+      });
   }
 
 }

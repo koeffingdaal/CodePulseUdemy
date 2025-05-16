@@ -1,12 +1,10 @@
 export interface AddBlogPost {
-  title: string;
-  shortDescription: string;
-  content: string;
-  featureImageUrl: string;
-  urlHandle: string;
-  author: string;
-  publishedDate: Date;
-  isVisible: boolean;
-
-
+  Title: string;
+  ShortDescription: string;
+  Content: string;
+  FeaturedImageUrl: string;
+  UrlHandle: string;  // Changed from urHandle to urlHandle
+  Author: string;
+  PublishedDate: Date;
+  IsVisible: boolean;
 }

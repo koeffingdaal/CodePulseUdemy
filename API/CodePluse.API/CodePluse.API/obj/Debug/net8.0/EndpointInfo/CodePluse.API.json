@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/BlogPost": {
+    "/api/BlogPosts": {
       "post": {
         "tags": [
-          "BlogPost"
+          "BlogPosts"
         ],
         "requestBody": {
           "content": {
@@ -165,35 +165,45 @@
   "components": {
     "schemas": {
       "CreateBlogPostRequestDto": {
+        "required": [
+          "author",
+          "content",
+          "featuredImageUrl",
+          "isVisible",
+          "publishedDate",
+          "shortDescription",
+          "title",
+          "urlHandle"
+        ],
         "type": "object",
         "properties": {
           "title": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "shortDescription": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "content": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "featuredImageUrl": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "urlHandle": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
+          },
+          "author": {
+            "minLength": 1,
+            "type": "string"
           },
           "publishedDate": {
             "type": "string",
             "format": "date-time"
-          },
-          "author": {
-            "type": "string",
-            "nullable": true
           },
           "isVisible": {
             "type": "boolean"
@@ -202,15 +212,19 @@
         "additionalProperties": false
       },
       "CreateCategoryRequestDto": {
+        "required": [
+          "name",
+          "urlHandle"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "urlHandle": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

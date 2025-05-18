@@ -40,4 +40,9 @@ export class AddBlogpostComponent {
       });
   }
 
+  clearContent(): void {
+    this.model.Content = ''
+
+  }
+
 }

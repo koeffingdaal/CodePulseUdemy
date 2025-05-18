@@ -35,8 +35,24 @@
         <!-- Content -->
         <div class="mb-3">
           <label for="content" class="form-label fw-bold">Content*</label>
-          <textarea id="content" name="content" class="form-control" rows="6" [(ngModel)]="model.Content"
-            required></textarea>
+          <div class="row">
+            <!-- Left Side: Textarea -->
+            <!-- HTML part -->
+            <div class="col-6 p-2">
+              <textarea name="content" id="content" class="form-control textarea-content"
+                [(ngModel)]="model.Content"></textarea>
+
+              <button type="button" class="btn btn-sm btn-danger mt-2" (click)="clearContent()">
+                Clear
+              </button>
+            </div>
+
+            <div class="col-6 p-2 markdown-preview">
+              <markdown [data]="model.Content"></markdown>
+            </div>
+
+          </div>
+
           <div class="invalid-feedback">Content is required</div>
         </div>
 
@@ -45,6 +61,14 @@
           <!-- Featured Image -->
           <div class="col-md-6 mb-3">
             <label for="featuredImageUrl" class="form-label fw-bold">Featured Image URL</label>
+
+            <ng-container *ngIf="model.FeaturedImageUrl !='' " >
+              <div>
+                <img [src]="model.FeaturedImageUrl" height="100" class="my-2" alt="Please paste the correct Url">
+              </div>
+            </ng-container>
+
+
             <input type="url" id="featuredImageUrl" name="featuredImageUrl" class="form-control"
               [(ngModel)]="model.FeaturedImageUrl">
             <small class="text-muted">Paste the full image URL</small>

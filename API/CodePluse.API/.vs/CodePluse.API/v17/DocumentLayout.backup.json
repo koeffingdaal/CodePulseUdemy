@@ -50,8 +50,7 @@
               "RelativeToolTip": "CodePluse.API\\Models\\DTO\\CreateCategoryRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T20:26:48.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T20:26:48.65Z"
             },
             {
               "$type": "Document",
@@ -61,7 +60,7 @@
               "RelativeDocumentMoniker": "CodePluse.API\\Controllers\\BlogPostsController.cs",
               "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Controllers\\BlogPostsController.cs",
               "RelativeToolTip": "CodePluse.API\\Controllers\\BlogPostsController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAFkAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwFkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T19:11:09.978Z",
               "EditorCaption": ""
@@ -88,8 +87,7 @@
               "RelativeToolTip": "CodePluse.API\\Repository\\Implementation\\BlogPostRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T21:04:32.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T21:04:32.738Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "CodePluse.API\\Repository\\Interface\\IBlogPostRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T21:03:59.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T21:03:59.274Z"
             },
             {
               "$type": "Document",

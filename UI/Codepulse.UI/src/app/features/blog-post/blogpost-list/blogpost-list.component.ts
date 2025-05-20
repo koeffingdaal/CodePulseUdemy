@@ -10,37 +10,55 @@ import { BlogPost } from '../models/blog-post.model';
 })
 export class BlogpostListComponent implements OnInit {
 
-  blogPost$?: Observable<BlogPost[]>
+  // Observable to hold all blog posts
+  blogPost$?: Observable<BlogPost[]>;
+
+  // Array to hold blog posts for the current page
   pagedBlogPosts: any[] = [];
 
   // Pagination settings
   currentPage = 1;
-  pageSize = 5;
-  totalPages = 0;
+  pageSize = 5; // Number of posts per page
+  totalPages = 0; // Total number of pages calculated dynamically
 
+  // Injecting the BlogPostService to fetch blog posts
+  constructor(private service: BlogPostService) { }
 
-  /**
-   *
-   */
-  constructor(private service: BlogPostService) {
-
-
-  }
-
+  // Lifecycle hook that runs once the component is initialized
   ngOnInit(): void {
-    // Get all blogpost
+    // Fetch all blog posts
     this.blogPost$ = this.service.getAllBlogPost();
-    this.blogPost$.subscribe(posts => {
-      this.totalPages = Math.ceil(posts.length / this.pageSize);
-      this.setPage(1, posts);
-    });
 
+    // Subscribe to the observable to get post data
+    this.blogPost$.subscribe(posts => {
+      this.totalPages = Math.ceil(posts.length / this.pageSize); // Calculate total pages
+      this.setPage(1, posts); // Load first page
+    });
   }
+
+  // Sets the current page and slices the post list for display
   setPage(page: number, posts: any[]) {
     this.currentPage = page;
     const startIndex = (page - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
-    this.pagedBlogPosts = posts.slice(startIndex, endIndex);
+    this.pagedBlogPosts = posts.slice(startIndex, endIndex); // Set paged data
+  }
+
+  // Returns a Bootstrap class based on the category name for styling badges
+  getBadgeClass(categoryName: string): string {
+    switch (categoryName.toLowerCase()) {
+      case 'java':
+        return 'bg-warning text-dark'; // Yellow badge
+      case 'java script':
+      case 'javascript':
+        return 'bg-info text-dark'; // Light blue badge
+      case 'python':
+        return 'bg-success'; // Green badge
+      case 'c#':
+        return 'bg-primary'; // Blue badge
+      default:
+        return 'bg-secondary'; // Default gray badge
+    }
   }
 
 }

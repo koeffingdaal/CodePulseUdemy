@@ -20,5 +20,10 @@ namespace CodePluse.API.Models.DTO
         public DateTime PublishedDate { get; set; }
         [Required]
         public bool IsVisible { get; set; }
+
+        [Required] 
+        public Guid[] Categories { get; set; }
+
+
     }
 }

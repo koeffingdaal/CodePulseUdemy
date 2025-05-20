@@ -177,6 +177,7 @@
       "CreateBlogPostRequestDto": {
         "required": [
           "author",
+          "categories",
           "content",
           "featuredImageUrl",
           "isVisible",
@@ -217,6 +218,13 @@
           },
           "isVisible": {
             "type": "boolean"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
           }
         },
         "additionalProperties": false

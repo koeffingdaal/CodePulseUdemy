@@ -1,5 +1,6 @@
 ﻿using CodePluse.API.Models.Domain;
 using CodePluse.API.Models.DTO;
+using CodePluse.API.Repository.Implementation;
 using CodePluse.API.Repository.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,9 +14,12 @@ namespace CodePluse.API.Controllers
 
         private readonly IBlogPostRepository blogPostRepository;
 
-        public BlogPostsController(IBlogPostRepository blogPostRepository)
+        private readonly ICategoryRepository categoryRepository;
+
+        public BlogPostsController(IBlogPostRepository blogPostRepository, ICategoryRepository categoryRepository )
         {
             this.blogPostRepository = blogPostRepository;   
+            this.categoryRepository = categoryRepository;
         }
 
         [HttpPost]
@@ -35,7 +39,23 @@ namespace CodePluse.API.Controllers
                 ShortDescription = dto.ShortDescription,
                 Title = dto.Title,
                 UrlHandle = dto.UrlHandle,
+                Categories = new List<Category>()
+
             };
+
+            // Checking if categories exist in db or not
+
+            foreach (var categoryGuid in dto.Categories) 
+            {
+                var existingCategory = await categoryRepository.GetCategoryByIdAsync(categoryGuid);
+
+                if (existingCategory != null)
+                {
+                    blogpost.Categories.Add(existingCategory);
+                    
+                }
+            }
+
 
             blogpost = await blogPostRepository.CreateAsync(blogpost);
 
@@ -52,6 +72,14 @@ namespace CodePluse.API.Controllers
                 ShortDescription = blogpost.ShortDescription,
                 Title = blogpost.Title,
                 UrlHandle = blogpost.UrlHandle,
+                Categories = blogpost.Categories.Select(x => new CategoryDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    UrlHandle = x.UrlHandle
+
+                }).ToList()
+
 
             };
 
@@ -84,6 +112,12 @@ namespace CodePluse.API.Controllers
                     ShortDescription = blogPost.ShortDescription,
                     Title = blogPost.Title,
                     UrlHandle = blogPost.UrlHandle,
+                    Categories = blogPost.Categories.Select(x => new CategoryDto
+                    {
+                        Id = x.Id,
+                        Name = x.Name,
+                        UrlHandle = x.UrlHandle
+                    }).ToList()
                 });
             }
 

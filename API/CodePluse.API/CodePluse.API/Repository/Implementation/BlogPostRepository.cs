@@ -29,7 +29,7 @@ namespace CodePluse.API.Repository.Implementation
         // Get all Blog Posts
         public async Task<IEnumerable<BlogPost>> GetAllAsync()
         {
-            return await _context.BlogPosts.ToListAsync();
+            return await _context.BlogPosts.Include(x => x.Categories).ToListAsync();
         }
     }
 }

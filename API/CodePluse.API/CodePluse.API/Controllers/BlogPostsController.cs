@@ -16,9 +16,9 @@ namespace CodePluse.API.Controllers
 
         private readonly ICategoryRepository categoryRepository;
 
-        public BlogPostsController(IBlogPostRepository blogPostRepository, ICategoryRepository categoryRepository )
+        public BlogPostsController(IBlogPostRepository blogPostRepository, ICategoryRepository categoryRepository)
         {
-            this.blogPostRepository = blogPostRepository;   
+            this.blogPostRepository = blogPostRepository;
             this.categoryRepository = categoryRepository;
         }
 
@@ -30,7 +30,7 @@ namespace CodePluse.API.Controllers
 
             var blogpost = new BlogPost
             {
-               
+
                 Author = dto.Author,
                 Content = dto.Content,
                 FeaturedImageUrl = dto.FeaturedImageUrl,
@@ -45,14 +45,14 @@ namespace CodePluse.API.Controllers
 
             // Checking if categories exist in db or not
 
-            foreach (var categoryGuid in dto.Categories) 
+            foreach (var categoryGuid in dto.Categories)
             {
                 var existingCategory = await categoryRepository.GetCategoryByIdAsync(categoryGuid);
 
                 if (existingCategory != null)
                 {
                     blogpost.Categories.Add(existingCategory);
-                    
+
                 }
             }
 
@@ -123,5 +123,45 @@ namespace CodePluse.API.Controllers
 
             return Ok(response);
         }
+
+        [HttpGet]
+        [Route("{id:guid}")]
+
+        public async Task<IActionResult> GetBlogPostById ([FromRoute] Guid id)
+        {
+            var existingBlogPost = await blogPostRepository.GetBlogPostByIdAsync(id);
+
+            if (existingBlogPost == null)
+            {
+                return NotFound();
+            }
+
+            var response = new BlogPostDto
+            {
+                Id = existingBlogPost.Id,
+                Author = existingBlogPost.Author,
+                Content = existingBlogPost.Content,
+                FeaturedImageUrl = existingBlogPost.FeaturedImageUrl,
+                IsVisible = existingBlogPost.IsVisible,
+                PublishedDate = existingBlogPost.PublishedDate,
+                ShortDescription = existingBlogPost.ShortDescription,
+                Title = existingBlogPost.Title,
+                UrlHandle = existingBlogPost.UrlHandle,
+                Categories = existingBlogPost.Categories.Select(x => new CategoryDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    UrlHandle = x.UrlHandle
+                }).ToList()
+            };
+
+
+
+            return Ok(response);
+
+
+        }
+
+
     }
 }

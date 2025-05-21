@@ -46,6 +46,29 @@
         }
       }
     },
+    "/api/BlogPosts/{id}": {
+      "get": {
+        "tags": [
+          "BlogPosts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Categories": {
       "post": {
         "tags": [

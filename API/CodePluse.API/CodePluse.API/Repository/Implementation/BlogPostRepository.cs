@@ -31,5 +31,10 @@ namespace CodePluse.API.Repository.Implementation
         {
             return await _context.BlogPosts.Include(x => x.Categories).ToListAsync();
         }
+
+        public async Task<BlogPost?> GetBlogPostByIdAsync(Guid id)
+        {
+            return await _context.BlogPosts.Include(x => x.Categories).FirstOrDefaultAsync(c => c.Id == id);
+        }
     }
 }

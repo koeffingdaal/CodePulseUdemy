@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\models\\dto\\blogpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\models\\dto\\blogpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\models\\domain\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\models\\domain\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\models\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\models\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\controllers\\blogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\controllers\\blogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\repository\\implementation\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\repository\\implementation\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\controllers\\blogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\controllers\\blogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\models\\dto\\createblogpostrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\models\\dto\\createblogpostrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|f:\\udemy\\codepulse\\api\\codepluse.api\\codepluse.api\\repository\\interface\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E40095AC-DFD1-4260-8644-D485897CB50A}|CodePluse.API\\CodePluse.API.csproj|solutionrelative:codepluse.api\\repository\\interface\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,80 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "IBlogPostRepository.cs",
+              "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Repository\\Interface\\IBlogPostRepository.cs",
+              "RelativeDocumentMoniker": "CodePluse.API\\Repository\\Interface\\IBlogPostRepository.cs",
+              "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Repository\\Interface\\IBlogPostRepository.cs",
+              "RelativeToolTip": "CodePluse.API\\Repository\\Interface\\IBlogPostRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T21:59:46.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BlogPostRepository.cs",
               "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Repository\\Implementation\\BlogPostRepository.cs",
               "RelativeDocumentMoniker": "CodePluse.API\\Repository\\Implementation\\BlogPostRepository.cs",
               "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Repository\\Implementation\\BlogPostRepository.cs",
               "RelativeToolTip": "CodePluse.API\\Repository\\Implementation\\BlogPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T22:01:32.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BlogPostDto.cs",
-              "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\DTO\\BlogPostDto.cs",
-              "RelativeDocumentMoniker": "CodePluse.API\\Models\\DTO\\BlogPostDto.cs",
-              "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\DTO\\BlogPostDto.cs",
-              "RelativeToolTip": "CodePluse.API\\Models\\DTO\\BlogPostDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:39:39.676Z",
+              "WhenOpened": "2025-05-20T22:01:32.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "BlogPostsController.cs",
               "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Controllers\\BlogPostsController.cs",
               "RelativeDocumentMoniker": "CodePluse.API\\Controllers\\BlogPostsController.cs",
               "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Controllers\\BlogPostsController.cs",
               "RelativeToolTip": "CodePluse.API\\Controllers\\BlogPostsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAAGYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAJUAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:18:18.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateBlogPostRequestDto.cs",
-              "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\DTO\\CreateBlogPostRequestDto.cs",
-              "RelativeDocumentMoniker": "CodePluse.API\\Models\\DTO\\CreateBlogPostRequestDto.cs",
-              "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\DTO\\CreateBlogPostRequestDto.cs",
-              "RelativeToolTip": "CodePluse.API\\Models\\DTO\\CreateBlogPostRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:16:54.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlogPost.cs",
-              "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\Domain\\BlogPost.cs",
-              "RelativeDocumentMoniker": "CodePluse.API\\Models\\Domain\\BlogPost.cs",
-              "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\Domain\\BlogPost.cs",
-              "RelativeToolTip": "CodePluse.API\\Models\\Domain\\BlogPost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:02:53.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Category.cs",
-              "DocumentMoniker": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\Domain\\Category.cs",
-              "RelativeDocumentMoniker": "CodePluse.API\\Models\\Domain\\Category.cs",
-              "ToolTip": "F:\\Udemy\\CodePulse\\API\\CodePluse.API\\CodePluse.API\\Models\\Domain\\Category.cs",
-              "RelativeToolTip": "CodePluse.API\\Models\\Domain\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:01:41.156Z"
+              "WhenOpened": "2025-05-20T21:18:18.129Z",
+              "EditorCaption": ""
             }
           ]
         }

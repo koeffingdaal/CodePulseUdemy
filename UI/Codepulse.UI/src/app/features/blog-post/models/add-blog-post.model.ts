@@ -7,4 +7,5 @@ export interface AddBlogPost {
   Author: string;
   PublishedDate: Date;
   IsVisible: boolean;
+  Categories: string[];
 }

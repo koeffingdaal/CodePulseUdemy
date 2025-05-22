@@ -8,7 +8,7 @@ export interface BlogPost {
   featureImageUrl: string;
   urlHandle: string;
   author: string;
-  publishedDate: Date;
+  publishedDate?: Date;
   isVisible: boolean;
   categories: Category[];
 }

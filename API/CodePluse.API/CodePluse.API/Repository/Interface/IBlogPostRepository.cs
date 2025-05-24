@@ -9,5 +9,7 @@ namespace CodePluse.API.Repository.Interface
         Task<IEnumerable<BlogPost>> GetAllAsync();
 
         Task<BlogPost?> GetBlogPostByIdAsync(Guid id);
+
+        Task<BlogPost?> UpdateAsync(BlogPost blogPost);
     }
 }

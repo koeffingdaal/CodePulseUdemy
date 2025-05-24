@@ -17,18 +17,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
   categories$?: Observable<Category[]>;
   selectedCategories: string[] = [];
 
-  model: BlogPost = {
-    id: '',
-    title: '',
-    shortDescription: '',
-    content: '',
-    author: '',
-    isVisible: true,
-    categories: [],
-    featureImageUrl: '',
-    urlHandle: '',
-    publishedDate: new Date()
-  };
+  model: BlogPost | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -66,25 +55,25 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
     });
   }
 
-  get publishedDateInput(): string {
-    if (!this.model.publishedDate) return '';
-    const date = new Date(this.model.publishedDate);
-    if (isNaN(date.getTime())) return '';
-    const offset = date.getTimezoneOffset();
-    date.setMinutes(date.getMinutes() - offset);
-    return date.toISOString().split('T')[0];
-  }
+  // get publishedDateInput(): string {
+  //   if (!this.model.publishedDate) return '';
+  //   const date = new Date(this.model.publishedDate);
+  //   if (isNaN(date.getTime())) return '';
+  //   const offset = date.getTimezoneOffset();
+  //   date.setMinutes(date.getMinutes() - offset);
+  //   return date.toISOString().split('T')[0];
+  // }
 
-  set publishedDateInput(value: string) {
-    if (value) {
-      const date = new Date(value);
-      const offset = date.getTimezoneOffset();
-      date.setMinutes(date.getMinutes() + offset);
-      this.model.publishedDate = date;
-    } else {
-      this.model.publishedDate = new Date();
-    }
-  }
+  // set publishedDateInput(value: string) {
+  //   if (value) {
+  //     const date = new Date(value);
+  //     const offset = date.getTimezoneOffset();
+  //     date.setMinutes(date.getMinutes() + offset);
+  //     this.model.publishedDate = date;
+  //   } else {
+  //     this.model.publishedDate = new Date();
+  //   }
+  // }
 
   onFormSubmit(): void {
 
@@ -100,17 +89,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
   }
 
   clearContent(): void {
-    this.model = {
-      ...this.model,
-      title: '',
-      shortDescription: '',
-      content: '',
-      author: '',
-      categories: [],
-      featureImageUrl: '',
-      urlHandle: '',
-      publishedDate: new Date()
-    };
+
   }
 
   ngOnDestroy(): void {

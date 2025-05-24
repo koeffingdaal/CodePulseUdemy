@@ -42,6 +42,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CodePluse.API.Controllers.BlogPostsController",
+    "Method": "UpdateBlogPosyById",
+    "RelativePath": "api/BlogPosts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateBlogPostRequestDto",
+        "Type": "CodePluse.API.Models.DTO.UpdateBlogPostRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CodePluse.API.Controllers.CategoriesController",
     "Method": "CreateCategory",
     "RelativePath": "api/Categories",

@@ -38,5 +38,27 @@ namespace CodePluse.API.Repository.Implementation
         {
             return await _context.BlogPosts.Include(x => x.Categories).FirstOrDefaultAsync(c => c.Id == id);
         }
+
+        public async Task<BlogPost> UpdateAsync(BlogPost blogPost)
+        {
+            var existingBlogPost = await _context.BlogPosts.Include(x => x.Categories).FirstOrDefaultAsync(x => x.Id == blogPost.Id);
+
+            if (existingBlogPost == null)
+            {
+                return null;
+            }
+
+            // Update BlogPost
+
+            _context.Entry(existingBlogPost).CurrentValues.SetValues(blogPost);
+
+            // Update Categories
+
+            existingBlogPost.Categories = blogPost.Categories;
+
+            await _context.SaveChangesAsync(); 
+
+            return blogPost;
+        }
     }
 }

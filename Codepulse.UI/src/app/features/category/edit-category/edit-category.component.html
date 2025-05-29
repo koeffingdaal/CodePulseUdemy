@@ -1,0 +1,70 @@
+<div class="container p-4 shadow rounded bg-white mt-4">
+  <h1 class="mb-4 text-primary border-bottom pb-2">Edit Category</h1>
+
+  <ng-container *ngIf="category; else notFound">
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+
+      <!-- Category ID (Read-only) -->
+      <div class="mb-3">
+        <label for="categoryId" class="form-label fw-bold">Category ID</label>
+        <input
+          type="text"
+          disabled
+          class="form-control-plaintext text-muted"
+          id="categoryId"
+          name="categoryId"
+          [(ngModel)]="category.id"
+        />
+      </div>
+
+      <!-- Category Name -->
+      <div class="mb-3">
+        <label for="categoryName" class="form-label fw-bold">Category Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="categoryName"
+          name="categoryName"
+          [(ngModel)]="category.name"
+          required
+          placeholder="Enter category name"
+        />
+      </div>
+
+      <!-- URL Handle -->
+      <div class="mb-4">
+        <label for="urlHandle" class="form-label fw-bold">URL Handle</label>
+        <input
+          type="text"
+          class="form-control"
+          id="urlHandle"
+          name="urlHandle"
+          [(ngModel)]="category.urlHandle"
+          required
+          placeholder="Enter URL handle"
+        />
+      </div>
+
+      <!-- Submit & Delete -->
+      <div class="d-flex justify-content-start align-items-center gap-3">
+        <button type="submit" class="btn btn-success px-4">
+          <i class="bi bi-save"></i> Update
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger px-4"
+          (click)="onDelete()"
+        >
+          <i class="bi bi-trash"></i> Delete
+        </button>
+      </div>
+    </form>
+  </ng-container>
+
+  <!-- Fallback Template -->
+  <ng-template #notFound>
+    <div class="alert alert-warning mt-4" role="alert">
+      <strong>Warning:</strong> Category not found!
+    </div>
+  </ng-template>
+</div>

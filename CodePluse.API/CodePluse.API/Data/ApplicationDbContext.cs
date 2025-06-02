@@ -17,5 +17,12 @@ namespace CodePluse.API.Data
 
         // DbSet for Category table — represents a collection of categories in the database
         public DbSet<Category> Categories { get; set; }
+
+
+        // DbSet for BlogImage table — represents a collection of categories in the database
+        public DbSet<BlogImage> BlogImages { get; set; }
+
+
+
     }
 }

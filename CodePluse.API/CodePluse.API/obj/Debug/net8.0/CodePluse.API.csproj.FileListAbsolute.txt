@@ -520,3 +520,4 @@ F:\Udemy\CodePulse\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.AspNet
 F:\Udemy\CodePulse\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\Udemy\CodePulse\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 F:\Udemy\CodePulse\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+F:\Udemy\CodePulse\CodePluse.API\CodePluse.API\obj\Debug\net8.0\CodePluse.API.sourcelink.json

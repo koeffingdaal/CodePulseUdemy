@@ -18,5 +18,5 @@ CodePulseUdemy/
 └── README.md # This file
 
 
-## 🖼️ Image Upload Feature
+
 

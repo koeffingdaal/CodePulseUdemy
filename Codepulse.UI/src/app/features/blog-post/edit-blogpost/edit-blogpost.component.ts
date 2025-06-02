@@ -15,6 +15,7 @@ import { UpdateBlogPost } from '../models/update-blog-post.model';
 export class EditBlogpostComponent implements OnInit, OnDestroy {
   id: string | null = null;
   selectedCategories: string[] = [];
+  isImageSelectorVisible: boolean = false;
 
   isSubmitting = false;
 
@@ -191,6 +192,14 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
     if (this.model) {
       this.model.content = '';
     }
+  }
+
+  openImageSelector(): void {
+    this.isImageSelectorVisible = true;
+  }
+
+  closeImageSelector() : void {
+    this.isImageSelectorVisible = false;
   }
 
   ngOnDestroy(): void {

@@ -15,6 +15,8 @@ export class AddBlogpostComponent implements OnInit  {
 
   model: AddBlogPost;
 
+  isImageSelectorVisible: boolean = false;
+
   categories$? : Observable<Category[]>
 
 
@@ -55,6 +57,14 @@ export class AddBlogpostComponent implements OnInit  {
   clearContent(): void {
     this.model.Content = ''
 
+  }
+
+  openImageSelector(): void {
+    this.isImageSelectorVisible = true;
+  }
+
+  closeImageSelector() : void {
+    this.isImageSelectorVisible = false;
   }
 
 }

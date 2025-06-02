@@ -62,7 +62,13 @@
           <div class="col-md-6 mb-3">
             <label for="featuredImageUrl" class="form-label fw-bold">Featured Image URL</label>
 
-            <ng-container *ngIf="model.FeaturedImageUrl !='' " >
+            <button type="button" class="btn btn-outline-primary btn-sm px-4 py-2 rounded shadow-sm"
+              (click)="openImageSelector()">
+              <i class="bi bi-image me-2"></i> Select Image
+            </button>
+
+
+            <ng-container *ngIf="model.FeaturedImageUrl !='' ">
               <div>
                 <img [src]="model.FeaturedImageUrl" height="100" class="my-2" alt="Please paste the correct Url">
               </div>
@@ -122,4 +128,13 @@
       </form>
     </div>
   </div>
+</div>
+
+
+<div class="images-container-modal" [ngClass]="{'d-block': isImageSelectorVisible, 'd-none': !isImageSelectorVisible}">
+  <button type="button" class="btn btn-outline-light close-modal-btn shadow-sm" (click)="closeImageSelector()">
+    &times;
+  </button>
+
+  <app-image-selector></app-image-selector>
 </div>

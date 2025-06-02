@@ -49,6 +49,12 @@
         <div class="col-md-6 mb-3">
           <label for="featuredImageUrl" class="form-label fw-bold">Featured Image URL</label>
 
+          <button type="button" class="btn btn-outline-primary btn-sm px-4 py-2 rounded shadow-sm"
+            (click)="openImageSelector()">
+            <i class="bi bi-image me-2"></i> Select Image
+          </button>
+
+
           <!-- Display image preview only if the featureImageUrl is defined and non-empty -->
           <ng-container *ngIf="model.featureImageUrl != null">
             <div>
@@ -57,7 +63,7 @@
             </div>
           </ng-container>
 
-          <input type="url" id="featuredImageUrl" name="featuredImageUrl" class="form-control"
+          <input type="text" id="featuredImageUrl" name="featuredImageUrl" class="form-control"
             [(ngModel)]="model.featureImageUrl" placeholder="https://example.com/image.jpg">
           <small class="text-muted">Paste the full image URL (starting with http/https)</small>
         </div>
@@ -118,4 +124,10 @@
 </div>
 
 
-<app-image-selector></app-image-selector>
+<div class="images-container-modal" [ngClass]="{'d-block': isImageSelectorVisible, 'd-none': !isImageSelectorVisible}">
+  <button type="button" class="btn btn-outline-light close-modal-btn shadow-sm" (click)="closeImageSelector()">
+    &times;
+  </button>
+
+  <app-image-selector></app-image-selector>
+</div>

@@ -50,7 +50,7 @@ namespace CodePluse.API.Controllers
                     Id = blogImage.Id,
                     Title = blogImage.Title,
                     DateCreated = blogImage.DateCreated,
-                    FileExtension = blogImage.FileExtension,
+                    FileExtenstion = blogImage.FileExtension,
                     FileName = blogImage.FileName,
                     Url = blogImage.Url
                 };

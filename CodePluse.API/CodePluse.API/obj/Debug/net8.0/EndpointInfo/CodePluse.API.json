@@ -363,7 +363,7 @@
             "type": "string",
             "nullable": true
           },
-          "fileExtension": {
+          "fileExtenstion": {
             "type": "string",
             "nullable": true
           },

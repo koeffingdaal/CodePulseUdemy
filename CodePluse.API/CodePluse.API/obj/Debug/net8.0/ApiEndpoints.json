@@ -159,6 +159,16 @@
   },
   {
     "ContainingType": "CodePluse.API.Controllers.ImageController",
+    "Method": "GetAllImages",
+    "RelativePath": "api/Image",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CodePluse.API.Controllers.ImageController",
     "Method": "UploadImage",
     "RelativePath": "api/Image",
     "HttpMethod": "POST",

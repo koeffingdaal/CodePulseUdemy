@@ -3,6 +3,7 @@ using CodePluse.API.Models.Domain;
 using CodePluse.API.Repository.Interface;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodePluse.API.Repository.Implementation
 {
@@ -20,6 +21,11 @@ namespace CodePluse.API.Repository.Implementation
             _webHostEnvironment = webHostEnvironment;
             _contextAccessor = contextAccessor;
             _applicationDbContext = applicationDbContext;
+        }
+
+        public async Task<IEnumerable<BlogImage>> GetAllImage()
+        {
+            return await _applicationDbContext.BlogImages.ToListAsync();
         }
 
         public async Task<BlogImage> Upload(IFormFile file, BlogImage blogImage)

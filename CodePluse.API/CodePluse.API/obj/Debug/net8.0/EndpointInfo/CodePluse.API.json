@@ -256,6 +256,16 @@
       }
     },
     "/api/Image": {
+      "get": {
+        "tags": [
+          "Image"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "tags": [
           "Image"

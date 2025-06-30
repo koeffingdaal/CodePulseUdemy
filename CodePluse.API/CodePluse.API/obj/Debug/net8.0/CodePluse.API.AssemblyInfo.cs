@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodePluse.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87d010cf8f1a1b386ad8072df57baed6967b744f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd0e4ea9c28c67624e1507f3d62776664d1ce3de")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodePluse.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodePluse.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

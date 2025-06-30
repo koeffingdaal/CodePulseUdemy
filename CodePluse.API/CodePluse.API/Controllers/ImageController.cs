@@ -17,6 +17,31 @@ namespace CodePluse.API.Controllers
         {
             _imageRepository = imageRepository;
         }
+        
+        [HttpGet]
+        public async Task<IActionResult> GetAllImages()
+        {
+            // call image repository to get all image
+            var images = await _imageRepository.GetAllImage();
+
+            // Convert Domain model DTO
+
+            var response = new List<BlogImageDto>();
+            foreach (var image in images)
+            {
+                response.Add(new BlogImageDto
+                {
+                    Id = image.Id,
+                    Title = image.Title,
+                    DateCreated = image.DateCreated,
+                    FileExtenstion = image.FileExtension,
+                    FileName = image.FileName,
+                    Url = image.Url
+                });
+            }
+            return Ok(response);
+        }
+
 
         [HttpPost]
         [ProducesResponseType(typeof(BlogImageDto), StatusCodes.Status200OK)]

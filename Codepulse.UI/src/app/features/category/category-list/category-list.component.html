@@ -1,0 +1,50 @@
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0 text-primary">📂 Category List</h2>
+    <a [routerLink]="['/admin/categories/add']" class="btn btn-success shadow-sm">
+      <i class="bi bi-plus-circle me-1"></i> Create New Category
+    </a>
+  </div>
+
+  <ng-container *ngIf="categories$ | async as categories; else noData">
+    <div class="table-responsive">
+      <table class="table table-hover table-striped table-bordered align-middle shadow-sm">
+        <thead class="table-dark text-center">
+          <tr>
+            <th scope="col">Serial No</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">URL Handle</th>
+            <th scope="col"> </th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categories | paginate: { itemsPerPage: 5, currentPage: page }; let i = index">
+            <td class="text-center">{{ (page - 1) * 5 + i + 1 }}</td>
+            <td>{{ category.id }}</td>
+            <td>{{ category.name }}</td>
+            <td>{{ category.urlHandle }}</td>
+            <td>
+              <a class="btn btn-light" [routerLink]="['/admin/categories/', category.id]">Edit</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+   <div class="d-flex justify-content-center mt-3">
+  <pagination-controls
+    (pageChange)="page = $event"
+    class="pagination-sm">
+  </pagination-controls>
+</div>
+
+  </ng-container>
+
+  <ng-template #noData>
+    <div class="alert alert-warning text-center mt-4" role="alert">
+      No categories found.
+    </div>
+  </ng-template>
+</div>

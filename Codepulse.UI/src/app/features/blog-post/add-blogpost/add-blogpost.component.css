@@ -1,0 +1,10 @@
+.textarea-content {
+  height: 300px;
+  max-height: 300px;
+}
+
+.markdown-preview {
+  height: 350px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}

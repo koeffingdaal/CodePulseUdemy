@@ -1,0 +1,35 @@
+ .outlined-img {
+    outline: 4px solid #0d6efd; /* Blue outline */
+    outline-offset: 6px;        /* Space between image and outline */
+    border-radius: 10px;        /* Optional rounded corners */
+    transition: outline 0.3s ease, outline-offset 0.3s ease;
+  }
+
+  .outlined-img:hover {
+    outline: 4px dashed #6610f2;
+    outline-offset: 10px;
+  }
+
+  .btn-outline-link {
+    outline: 2px solid #0d6efd;        /* Primary blue outline */
+    outline-offset: 4px;               /* Space between outline and element */
+    border-radius: 50rem;              /* Pill shape */
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0d6efd;
+    background-color: transparent;
+    border: 1px solid #0d6efd;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-outline-link:hover,
+  .btn-outline-link:focus {
+    background-color: #0d6efd;
+    color: white;
+    outline: 2px dashed #6610f2;
+    outline-offset: 6px;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.15);
+  }

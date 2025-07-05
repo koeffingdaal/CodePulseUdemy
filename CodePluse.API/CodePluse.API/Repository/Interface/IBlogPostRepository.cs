@@ -10,6 +10,8 @@ namespace CodePluse.API.Repository.Interface
 
         Task<BlogPost?> GetBlogPostByIdAsync(Guid id);
 
+        Task<BlogPost?> GetBlogPostByUrlHandleAsync (string urlHandle);
+
         Task<BlogPost?> UpdateAsync(BlogPost blogPost);
 
         Task<BlogPost?> DeleteAsync(Guid id);

@@ -1,26 +1,51 @@
+<!-- Container with vertical padding -->
 <div class="container py-5">
+  <!-- Bootstrap row with gutter spacing between columns -->
   <div class="row g-4">
+
+    <!-- Angular async pipe to subscribe to the blogs$ observable -->
     <ng-container *ngIf="blogs$ | async as blogs">
+
+      <!-- Loop through each blog in the blogs array -->
       <div class="col-12 col-md-6 col-lg-4" *ngFor="let blog of blogs">
+
+        <!-- Card layout for each blog post -->
         <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <img [src]="blog.featureImageUrl"
-               class="outlined-img"
-               [alt]="blog.title"
-               style="height: 220px;"
-               alt="">
 
+          <!-- Blog feature image with fixed height -->
+          <img [src]="blog.featureImageUrl" class="outlined-img" [alt]="blog.title" style="height: 220px;" alt="">
+
+          <!-- Card body with vertical layout -->
           <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title fw-semibold text-primary">{{ blog.title }}</h5>
-            <p class="card-text text-muted mb-3">{{ blog.shortDescription }}</p>
 
+            <!-- Blog title -->
+            <h5 class="card-title fw-semibold text-primary">
+              {{ blog.title }}
+            </h5>
+
+            <!-- Short description of the blog -->
+            <p class="card-text text-muted mb-3">
+              {{ blog.shortDescription }}
+            </p>
+
+            <!-- Author name -->
+            <p class="card-text text-muted mb-3">
+              - {{ blog.author }}
+            </p>
+
+            <!-- 'Read More' link aligned to the bottom of the card -->
             <div class="mt-auto">
               <a [routerLink]="['/blog', blog.urlHandle]" class="btn-outline-link">
                 Read More
               </a>
             </div>
-          </div>
-        </div>
-      </div>
+
+          </div> <!-- End card body -->
+
+        </div> <!-- End card -->
+
+      </div> <!-- End column -->
+
     </ng-container>
-  </div>
-</div>
+  </div> <!-- End row -->
+</div> <!-- End container -->

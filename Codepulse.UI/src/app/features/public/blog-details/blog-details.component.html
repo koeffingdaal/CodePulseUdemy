@@ -1,0 +1,74 @@
+<ng-container *ngIf="blogPost$ | async as blogPost; else loader">
+
+  <!-- Reading Progress Bar -->
+  <div class="progress-container position-fixed top-0 start-0 w-100" style="z-index: 1050;">
+    <div class="progress-bar bg-primary" [style.width.%]="scrollProgress"></div>
+  </div>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="d-flex justify-content-end mb-3">
+          <button class="btn btn-outline-secondary btn-sm" (click)="toggleTheme()">
+            <i class="bi" [ngClass]="isDarkMode ? 'bi-sun' : 'bi-moon'"></i>
+            {{ isDarkMode ? 'Light' : 'Dark' }}
+          </button>
+        </div>
+
+
+        <!-- Feature Image -->
+        <div class="text-center mb-5">
+          <img [src]="blogPost.featureImageUrl" [alt]="blogPost.title" [title]="blogPost.title"
+            class="img-fluid rounded-4 shadow-lg animate__animated animate__fadeIn" alt="" />
+        </div>
+
+        <!-- Blog Title -->
+        <h1 class="display-5 fw-bold text-center mb-3 text-dark">{{ blogPost.title }}</h1>
+
+        <!-- Author and Date -->
+        <div class="d-flex justify-content-center gap-4 mb-4 text-secondary small">
+          <div><i class="bi bi-person-circle me-1"></i>{{ blogPost.author }}</div>
+          <div><i class="bi bi-calendar3 me-1"></i>{{ blogPost.publishedDate | date: 'fullDate' }}</div>
+        </div>
+
+        <!-- Category Badges -->
+        <div *ngIf="blogPost.categories?.length" class="mb-4 text-center">
+          <ng-container *ngFor="let category of blogPost.categories">
+            <span class="badge rounded-pill bg-gradient text-white bg-primary me-2 px-3 py-2">
+              {{ category.name }}
+            </span>
+          </ng-container>
+        </div>
+
+        <!-- Optional Short Description -->
+        <!--
+        <div class="bg-light p-4 rounded-3 mb-4">
+          <h5 class="fw-semibold">Summary</h5>
+          <markdown [data]="blogPost.shortDescription"></markdown>
+        </div>
+        -->
+
+        <!-- Blog Content -->
+        <div class="blog-content fs-5 lh-lg">
+          <markdown [data]="blogPost.content"></markdown>
+        </div>
+
+        <!-- Footer -->
+        <div class="border-top pt-4 mt-5 text-center text-muted small">
+          <p>Thanks for reading!</p>
+          <p class="mb-0">Last updated on {{ blogPost.publishedDate | date:'dd MMM yyyy' }}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<!-- Loader -->
+<ng-template #loader>
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 300px;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</ng-template>

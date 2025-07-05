@@ -40,3 +40,27 @@
   transform: scale(1.1);
 }
 
+.blog-content img {
+  max-width: 100%;
+  margin: 2em 0 2em 0;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --badge-bg: #e7f1ff;
+  --meta-color: #6c757d;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e4e4e4;
+  --badge-bg: #2a2a2a;
+  --meta-color: #b0b0b0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

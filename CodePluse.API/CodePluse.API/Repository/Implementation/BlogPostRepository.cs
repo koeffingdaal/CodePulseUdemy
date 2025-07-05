@@ -53,6 +53,13 @@ namespace CodePluse.API.Repository.Implementation
             return await _context.BlogPosts.Include(x => x.Categories).FirstOrDefaultAsync(c => c.Id == id);
         }
 
+
+        // Get Blogpost By Url Handle
+        public async Task<BlogPost> GetBlogPostByUrlHandleAsync(string urlHandle)
+        {
+            return await _context.BlogPosts.Include(c => c.Categories).FirstOrDefaultAsync(x => x.UrlHandle == urlHandle);
+        }
+
         public async Task<BlogPost> UpdateAsync(BlogPost blogPost)
         {
             var existingBlogPost = await _context.BlogPosts.Include(x => x.Categories).FirstOrDefaultAsync(x => x.Id == blogPost.Id);

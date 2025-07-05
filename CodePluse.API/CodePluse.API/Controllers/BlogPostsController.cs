@@ -127,7 +127,7 @@ namespace CodePluse.API.Controllers
         [HttpGet]
         [Route("{id:guid}")]
 
-        public async Task<IActionResult> GetBlogPostById ([FromRoute] Guid id)
+        public async Task<IActionResult> GetBlogPostById([FromRoute] Guid id)
         {
             var existingBlogPost = await blogPostRepository.GetBlogPostByIdAsync(id);
 
@@ -159,6 +159,47 @@ namespace CodePluse.API.Controllers
 
             return Ok(response);
 
+
+        }
+
+        [HttpGet]
+        [Route("{urlHandle}")]
+
+        public async Task<IActionResult> GetBlogPostByUrlHandle([FromRoute] string urlHandle)
+        {
+            // Get Blogpost Details from Repository
+
+            var blogPostDetails = await blogPostRepository.GetBlogPostByUrlHandleAsync(urlHandle);
+
+            // Convert Domain model to DTO
+
+            if (blogPostDetails == null)
+            {
+                return NotFound();
+            }
+
+            var response = new BlogPostDto
+            {
+                Id = blogPostDetails.Id,
+                Author = blogPostDetails.Author,
+                Content = blogPostDetails.Content,
+                FeaturedImageUrl = blogPostDetails.FeaturedImageUrl,
+                IsVisible = blogPostDetails.IsVisible,
+                PublishedDate = blogPostDetails.PublishedDate,
+                ShortDescription = blogPostDetails.ShortDescription,
+                Title = blogPostDetails.Title,
+                UrlHandle = blogPostDetails.UrlHandle,
+                Categories = blogPostDetails.Categories.Select(x => new CategoryDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    UrlHandle = x.UrlHandle
+                }).ToList()
+            };
+
+
+
+            return Ok(response);
 
         }
 

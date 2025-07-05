@@ -532,8 +532,6 @@ F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\CodePluse.API.pdb
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Azure.Core.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Azure.Identity.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Humanizer.dll
-F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Build.Locator.dll
@@ -555,8 +553,6 @@ F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Confi
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
@@ -699,3 +695,4 @@ F:\Udemy\CodePluse.API\CodePluse.API\obj\Debug\net8.0\CodePluse.API.pdb
 F:\Udemy\CodePluse.API\CodePluse.API\obj\Debug\net8.0\CodePluse.API.genruntimeconfig.cache
 F:\Udemy\CodePluse.API\CodePluse.API\obj\Debug\net8.0\ref\CodePluse.API.dll
 F:\Udemy\CodePluse.API\CodePluse.API\obj\Debug\net8.0\CodePluse.API.sourcelink.json
+F:\Udemy\CodePluse.API\CodePluse.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
